@@ -22,6 +22,23 @@ github_username: Karanjaian
 minimal_mistakes_skin: default
 search: true
 
+# Enable navigation bar in the header
+header:
+  navigation: true
+# Site Navigation Links
+navigation:
+  - title: "Home"
+    url: /
+  - title: "Resume"
+    url: /resume/
+  - title: "Projects"
+    url: /projects/
+  - title: "Lab Challenges"
+    url: /labs/
+  - title: "Contact"
+    url: /contact/
+
+
 # Build settings
 markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes
@@ -124,6 +141,6 @@ main:
   - title: "Contact"
     url: /contact/
 
-  
+
 
   
