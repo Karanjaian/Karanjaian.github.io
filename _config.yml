@@ -74,7 +74,7 @@ plugins:
 
 author:
   name: "Ian Karanja"
-  avatar: "/assets/images/bio-photo.jpg"  # Replace with your actual photo path if you want
+  avatar: "/assets/images/Pfp.jpg"  # Replace with your actual photo path if you want
   bio: "Bachelor of Computer Science student | Aspiring Cybersecurity Professional."
   links:
     - label: "GitHub"
