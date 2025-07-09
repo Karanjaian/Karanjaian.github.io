@@ -1,10 +1,12 @@
 ---
 layout: splash
 title: "Ian Karanja | Portfolio"
+author_profile: true
+
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
-  overlay_image: /assets/images/header-background.jpg
+  overlay_image: /assets/images/Pfp.jpg
   actions:
     - label: "Resume"
       url: "/resume/"
@@ -30,4 +32,4 @@ Currently, I’m working on a **Network Scanning Project using Nmap** and partic
 
 ---
 
-> _“The best way to predict the future is to create it.” — Abraham Lincoln_
+
