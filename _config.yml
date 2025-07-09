@@ -74,7 +74,7 @@ plugins:
 
 author:
   name: "Ian Karanja"
-  avatar: "assets/images/Pfp.jpg" 
+  avatar: "aassets/images/Pfp.jpg" 
   bio: "Bachelor of Computer Science student | Aspiring Cybersecurity Professional."
   links:
     - label: "GitHub"
