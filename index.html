@@ -1,135 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ian Karanja | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ian Karanja | Portfolio</title>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <!-- NAVIGATION -->
-  <nav>
-    <a href="#hero">Home</a>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-    <button id="theme-toggle">🌙</button>
-  </nav>
+<header>
+    <nav class="nav">
+        <div class="logo">Ian Karanja</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button id="themeToggle">🌙</button>
+    </nav>
+</header>
 
-  <!-- HERO -->
-  <header id="hero" class="hero">
-    <img src="images/pfp.jpg" class="profile-pic" alt="Ian">
-    <h1>Ian Karanja</h1>
-    <p>Computer Science Student | Cybersecurity Enthusiast | Web Developer</p>
-    <button id="print-cv">🖨 Print My CV</button>
-  </header>
+<section id="hero">
+    <h1>Hi, I'm Ian</h1>
+    <p>Cybersecurity Student & Developer</p>
+    <button id="printCV">Print My CV</button>
+</section>
 
-  <!-- ABOUT -->
-  <section id="about">
+<section id="about">
     <h2>About Me</h2>
-    <p>
-      I am a passionate <strong>Computer Science student</strong> with certifications in web design and cybersecurity.
-      I completed the <strong>Cisco Ethical Hacker</strong> program under Cyber Shujaa, and I'm certified in <strong>Fortinet Threat Landscape</strong> and Web Design.
-      I actively participate in <strong>CTF challenges</strong> on HackTheBox and TryHackMe, and I'm proficient in Linux, Windows and Networking.
-    </p>
-  </section>
+    <p>I am a cybersecurity student passionate about ethical hacking, anomaly detection, and security automation. I enjoy building real-world projects and continuously improving my skills.</p>
+</section>
 
-  <!-- SKILLS -->
-  <section id="skills">
-    <h2>Skills & Tools</h2>
-
-    <div class="skills-container">
-      <div class="skill-item">
-        <img src="images/nmap.jpeg" alt="Nmap">
-        <p>Nmap</p>
-      </div>
-      <div class="skill-item">
-        <img src="images/wireshark.jpeg" alt="Wireshark">
-        <p>Wireshark</p>
-      </div>
-      <div class="skill-item">
-        <img src="images/burpsuite.png" alt="Burp">
-        <p>Burp Suite</p>
-      </div>
-    </div>
-
-    <h3>Technical Skill Levels</h3>
-
+<section id="skills">
+    <h2>Skills</h2>
     <div class="skill">
-      <p>HTML</p>
-      <div class="skill-bar"><div class="skill-level" data-skill="90"></div></div>
+        <p>Python</p>
+        <div class="skill-bar"><div class="skill-level" data-level="90"></div></div>
     </div>
-
     <div class="skill">
-      <p>CSS</p>
-      <div class="skill-bar"><div class="skill-level" data-skill="80"></div></div>
+        <p>JavaScript</p>
+        <div class="skill-bar"><div class="skill-level" data-level="75"></div></div>
     </div>
-
     <div class="skill">
-      <p>JavaScript</p>
-      <div class="skill-bar"><div class="skill-level" data-skill="70"></div></div>
+        <p>Cybersecurity</p>
+        <div class="skill-bar"><div class="skill-level" data-level="85"></div></div>
     </div>
+</section>
 
-    <div class="skill">
-      <p>Linux</p>
-      <div class="skill-bar"><div class="skill-level" data-skill="85"></div></div>
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="project-grid">
+        <div class="project-card">
+            <h3>Financial Fraud Anomaly Detector</h3>
+            <p>Machine learning system that detects abnormal financial transactions.</p>
+        </div>
+        <div class="project-card">
+            <h3>Cybersecurity Threat Monitor</h3>
+            <p>Real-time log analysis and suspicious activity detection dashboard.</p>
+        </div>
+        <div class="project-card">
+            <h3>CTF Tools Suite</h3>
+            <p>Custom-built scripts for solving CTF challenges efficiently.</p>
+        </div>
     </div>
+</section>
 
-  </section>
-
-  <!-- CERTIFICATIONS -->
-  <section id="badges">
-    <h2>Badges & Certifications</h2>
-    <div class="badge-grid">
-      <img src="images/htb.png" alt="Hack The Box">
-      <img src="images/tryhackme.png" alt="TryHackMe">
-      <img src="images/portswigger.png" alt="PortSwigger">
-    </div>
-    <p><a href="https://www.credly.com/users/ian-karanja.8187a41e" target="_blank">View all badges on Credly</a></p>
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="projects">
-    <h2>Projects & CTF Work</h2>
-    <p>Here are the platforms where I practice cybersecurity:</p>
-
-    <ul>
-      <li><a href="https://www.hackthebox.com" target="_blank">Hack The Box</a></li>
-      <li><a href="https://tryhackme.com" target="_blank">TryHackMe</a></li>
-    </ul>
-
-    <div class="project-item">
-      <h3>CTF Writeups</h3>
-      <p>My personal writeups for HackTheBox, TryHackMe and PortSwigger labs.</p>
-      <a href="https://github.com/Karanjaian/ctf-writeups" target="_blank">View on GitHub</a>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-
-    <p>Email: <a href="mailto:iankaranja13763@gmail.com">iankaranja13763@gmail.com</a></p>
-    <p>Phone: <a href="tel:+254708272892">+254 708 272 892</a></p>
-
-    <p>LinkedIn:  
-      <a href="https://www.linkedin.com/in/ian-karanja-1867b5367" target="_blank">My LinkedIn</a>
-    </p>
-
-    <p>GitHub:  
-      <a href="https://github.com/Karanjaian" target="_blank">My GitHub</a>
-    </p>
-
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2025 Ian Karanja</p>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
+<section id="contact">
+    <
