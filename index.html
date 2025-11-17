@@ -1,83 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ian Karanja • Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ian Karanja | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="#hero">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <button id="theme-toggle">🌙</button>
+  </nav>
 
-        <!-- Dark Mode Toggle -->
-        <button id="theme-toggle">🌙</button>
-    </nav>
+  <!-- HERO -->
+  <header id="hero" class="hero">
+    <img src="images/pfp.jpg" class="profile-pic" alt="Ian">
+    <h1>Ian Karanja</h1>
+    <p>Computer Science Student | Cybersecurity Enthusiast | Web Developer</p>
+    <button id="print-cv">🖨 Print My CV</button>
+  </header>
 
-    <!-- HERO SECTION -->
-    <section id="home" class="hero">
-        <img src="images/profile.jpg" class="profile-pic" alt="Profile Picture">
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am a passionate <strong>Computer Science student</strong> with certifications in web design and cybersecurity.
+      I completed the <strong>Cisco Ethical Hacker</strong> program under Cyber Shujaa, and I'm certified in <strong>Fortinet Threat Landscape</strong> and Web Design.
+      I actively participate in <strong>CTF challenges</strong> on HackTheBox and TryHackMe, and I'm proficient in Linux, Windows and Networking.
+    </p>
+  </section>
 
-        <h1>Hi, I'm <span class="accent">Ian Karanja</span></h1>
-        <p>Cybersecurity Student • Ethical Hacking • Web Security • Developer</p>
+  <!-- SKILLS -->
+  <section id="skills">
+    <h2>Skills & Tools</h2>
 
-        <!-- Print CV -->
-        <button id="print-cv" class="btn-accent">🖨️ Print My CV</button>
-    </section>
+    <div class="skills-container">
+      <div class="skill-item">
+        <img src="images/nmap.jpeg" alt="Nmap">
+        <p>Nmap</p>
+      </div>
+      <div class="skill-item">
+        <img src="images/wireshark.jpeg" alt="Wireshark">
+        <p>Wireshark</p>
+      </div>
+      <div class="skill-item">
+        <img src="images/burpsuite.png" alt="Burp">
+        <p>Burp Suite</p>
+      </div>
+    </div>
 
-    <!-- SKILLS SECTION -->
-    <section id="skills">
-        <h2>Skills</h2>
+    <h3>Technical Skill Levels</h3>
 
-        <div class="skills-container">
+    <div class="skill">
+      <p>HTML</p>
+      <div class="skill-bar"><div class="skill-level" data-skill="90"></div></div>
+    </div>
 
-            <div class="skill-item">
-                <p>Python</p>
-                <div class="skill-bar"><span data-level="90"></span></div>
-            </div>
+    <div class="skill">
+      <p>CSS</p>
+      <div class="skill-bar"><div class="skill-level" data-skill="80"></div></div>
+    </div>
 
-            <div class="skill-item">
-                <p>HTML & CSS</p>
-                <div class="skill-bar"><span data-level="80"></span></div>
-            </div>
+    <div class="skill">
+      <p>JavaScript</p>
+      <div class="skill-bar"><div class="skill-level" data-skill="70"></div></div>
+    </div>
 
-            <div class="skill-item">
-                <p>Cybersecurity</p>
-                <div class="skill-bar"><span data-level="75"></span></div>
-            </div>
+    <div class="skill">
+      <p>Linux</p>
+      <div class="skill-bar"><div class="skill-level" data-skill="85"></div></div>
+    </div>
 
-            <div class="skill-item">
-                <p>Bash Scripting</p>
-                <div class="skill-bar"><span data-level="65"></span></div>
-            </div>
+  </section>
 
-        </div>
-    </section>
+  <!-- CERTIFICATIONS -->
+  <section id="badges">
+    <h2>Badges & Certifications</h2>
+    <div class="badge-grid">
+      <img src="images/htb.png" alt="Hack The Box">
+      <img src="images/tryhackme.png" alt="TryHackMe">
+      <img src="images/portswigger.png" alt="PortSwigger">
+    </div>
+    <p><a href="https://www.credly.com/users/ian-karanja.8187a41e" target="_blank">View all badges on Credly</a></p>
+  </section>
 
-    <!-- PROJECTS -->
-    <section id="projects">
-        <h2>Projects</h2>
-        <p>Coming soon...</p>
-    </section>
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2>Projects & CTF Work</h2>
+    <p>Here are the platforms where I practice cybersecurity:</p>
 
-    <!-- CONTACT -->
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:iankaranja13763@gmail.com">iankaranja13763@gmail.com</a></p>
-        <p>Location: Nairobi, Kenya</p>
-    </section>
+    <ul>
+      <li><a href="https://www.hackthebox.com" target="_blank">Hack The Box</a></li>
+      <li><a href="https://tryhackme.com" target="_blank">TryHackMe</a></li>
+    </ul>
 
-    <!-- FOOTER -->
-    <footer>
-        © 2025 Ian Karanja • Portfolio
-    </footer>
+    <div class="project-item">
+      <h3>CTF Writeups</h3>
+      <p>My personal writeups for HackTheBox, TryHackMe and PortSwigger labs.</p>
+      <a href="https://github.com/Karanjaian/ctf-writeups" target="_blank">View on GitHub</a>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+
+    <p>Email: <a href="mailto:iankaranja13763@gmail.com">iankaranja13763@gmail.com</a></p>
+    <p>Phone: <a href="tel:+254708272892">+254 708 272 892</a></p>
+
+    <p>LinkedIn:  
+      <a href="https://www.linkedin.com/in/ian-karanja-1867b5367" target="_blank">My LinkedIn</a>
+    </p>
+
+    <p>GitHub:  
+      <a href="https://github.com/Karanjaian" target="_blank">My GitHub</a>
+    </p>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Ian Karanja</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
