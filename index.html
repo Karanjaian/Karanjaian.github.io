@@ -1,81 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ian Karanja | Portfolio</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ian Karanja | Cybersecurity Analyst</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<header>
-    <nav class="nav">
-        <div class="logo">Ian Karanja</div>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <button id="themeToggle">🌙</button>
+  <header id="home">
+    <nav>
+      <div class="logo">Ian Karanja</div>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button id="toggle-theme">🌙</button></li>
+      </ul>
     </nav>
-</header>
+    <div class="hero">
+      <h1>Ian Karanja</h1>
+      <p>Aspiring Cybersecurity Analyst</p>
+      <a href="#contact" class="btn">Get in Touch</a>
+    </div>
+  </header>
 
-<section id="hero">
-    <h1>Hi, I'm Ian</h1>
-    <p>Cybersecurity Student & Developer</p>
-    <button id="printCV">Print My CV</button>
-</section>
-
-<section id="about">
+  <section id="about">
     <h2>About Me</h2>
-    <p>I am a cybersecurity student passionate about ethical hacking, anomaly detection, and security automation. I enjoy building real-world projects and continuously improving my skills.</p>
-</section>
+    <p>I am Ian Karanja, an aspiring Cybersecurity Analyst currently pursuing a Bachelor’s degree in Computer Science at Zetech University. My focus is on building a solid technical foundation in security tools, network analysis, and offensive security techniques. I actively develop my skills through hands‑on practice, CTF challenges, and personal projects.</p>
+    <p>I’m skilled in Python scripting and familiar with key cybersecurity tools such as Nmap, Wireshark, and Burp Suite. I’ve also built a Python‑based network scanning tool capable of detecting active hosts, which strengthened my understanding of reconnaissance and network behavior.</p>
+    <p>I am a Cisco Certified Ethical Hacker through the Cyber Shujaa program (May–August 2025), Fortinet-certified in threat landscape fundamentals, and Udemy-certified in web development and WordPress. Even though I’m early in my career, I deliberately invest in continuous learning, aiming to transition into roles involving security operations, vulnerability analysis, and threat detection.</p>
+    <a href="Ian_Karanja_CV.pdf" download class="btn">Download CV</a>
+  </section>
 
-<section id="skills">
+  <section id="skills">
     <h2>Skills</h2>
     <div class="skill">
-        <p>Python</p>
-        <div class="skill-bar"><div class="skill-level" data-level="90"></div></div>
+      <h3>Python Scripting</h3>
+      <div class="skill-bar"><div style="width: 85%"></div></div>
     </div>
     <div class="skill">
-        <p>JavaScript</p>
-        <div class="skill-bar"><div class="skill-level" data-level="75"></div></div>
+      <h3>Nmap</h3>
+      <div class="skill-bar"><div style="width: 80%"></div></div>
     </div>
     <div class="skill">
-        <p>Cybersecurity</p>
-        <div class="skill-bar"><div class="skill-level" data-level="85"></div></div>
+      <h3>Wireshark</h3>
+      <div class="skill-bar"><div style="width: 80%"></div></div>
     </div>
-</section>
+    <div class="skill">
+      <h3>Burp Suite</h3>
+      <div class="skill-bar"><div style="width: 75%"></div></div>
+    </div>
+    <div class="skill">
+      <h3>Web Development / WordPress</h3>
+      <div class="skill-bar"><div style="width: 70%"></div></div>
+    </div>
+  </section>
 
-<section id="projects">
+  <section id="projects">
     <h2>Projects</h2>
-    <div class="project-grid">
-        <div class="project-card">
-            <h3>Financial Fraud Anomaly Detector</h3>
-            <p>Machine learning system that detects abnormal financial transactions.</p>
-        </div>
-        <div class="project-card">
-            <h3>Cybersecurity Threat Monitor</h3>
-            <p>Real-time log analysis and suspicious activity detection dashboard.</p>
-        </div>
-        <div class="project-card">
-            <h3>CTF Tools Suite</h3>
-            <p>Custom-built scripts for solving CTF challenges efficiently.</p>
-        </div>
+    <div class="project">
+      <h3>Python Network Scanner</h3>
+      <p>A Python-based tool that detects active hosts on the internet, helping with network reconnaissance and learning network behaviors.</p>
+      <a href="https://github.com/Karanjaian" target="_blank" class="btn">View on GitHub</a>
     </div>
-</section>
+  </section>
 
-    <section id="contact">
-    <h2>Contact Me</h2>
-    <div class="socials">
-        <a href="https://github.com/" target="_blank">GitHub</a>
-        <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
-        <a href="mailto:iankaranja13763@gmail.com" target="_blank">Email</a>
-    </div>
-</section>
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <ul>
+      <li>Cisco Certified Ethical Hacker (Cyber Shujaa, May–Aug 2025)</li>
+      <li>Fortinet Threat Landscape Certification</li>
+      <li>Udemy Web Development & WordPress Certification</li>
+    </ul>
+  </section>
 
-<script src="script.js"></script>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:iankaranja13763@gmail.com">iankaranja13763@gmail.com</a></p>
+    <p>Phone: <a href="tel:+254708272892">+254708272892</a></p>
+    <p>GitHub: <a href="https://github.com/Karanjaian" target="_blank">github.com/Karanjaian</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/posts/withsandra_cybersecurity-socanalyst-certifications-activity-7392214256810631169-67pu?utm_source=screenshot_social_share&utm_medium=android_app&rcm=ACoAAFsQobYBag7KczO3earDWWOWsfhG_CSwz7s&utm_campaign=share_via" target="_blank">LinkedIn Profile</a></p>
+  </section>
 
+  <footer>
+    <p>&copy; 2025 Ian Karanja | All Rights Reserved</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
