@@ -1,28 +1,44 @@
-// Dark/Light Mode Toggle
-const toggleThemeBtn = document.getElementById('toggle-theme');
-toggleThemeBtn.addEventListener('click', () => {
-  if(document.documentElement.getAttribute('data-theme') === 'dark') {
-    document.documentElement.setAttribute('data-theme', 'light');
+const toggleBtn = document.getElementById('toggle-theme');
+toggleBtn.addEventListener('click', () => {
+  document.documentElement.toggleAttribute('data-theme');
+  if(document.documentElement.hasAttribute('data-theme')) {
+    toggleBtn.textContent = '☀️';
   } else {
-    document.documentElement.setAttribute('data-theme', 'dark');
+    toggleBtn.textContent = '🌙';
   }
 });
 
-// Animate Skill Bars when in viewport
-const skills = document.querySelectorAll('.skill-bar div');
+const skillBars = document.querySelectorAll('.skill-bar div');
 
-const isInViewport = (el) => {
-  const rect = el.getBoundingClientRect();
-  return rect.top <= window.innerHeight && rect.bottom >= 0;
-};
-
-const animateSkills = () => {
-  skills.forEach(skill => {
-    if(isInViewport(skill)) {
-      skill.style.width = skill.getAttribute('data-width');
+function animateSkills() {
+  skillBars.forEach(bar => {
+    const top = bar.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+    if(top < windowHeight - 50) {
+      bar.style.width = bar.getAttribute('data-width');
     }
   });
-};
+}
 
 window.addEventListener('scroll', animateSkills);
 window.addEventListener('load', animateSkills);
+
+const sections = document.querySelectorAll('section');
+
+const options = {
+  threshold: 0.1
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) {
+      entry.target.classList.add('fade-in');
+      observer.unobserve(entry.target);
+    }
+  });
+}, options);
+
+sections.forEach(section => {
+  section.classList.add('fade-section');
+  observer.observe(section);
+});
