@@ -1,144 +1,155 @@
-/* General Styling */
-body {
-  margin: 0;
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background-color: #0d1117;
-  color: #c9d1d9;
-  line-height: 1.6;
-  padding-top: 60px; 
+/* VARIABLES FOR LIGHT/DARK MODE */
+:root {
+  --bg: #0d1117;
+  --text: #c9d1d9;
+  --card: #161b22;
+  --accent: #00d4ff;
 }
 
-/* Hero Section */
+.light-mode {
+  --bg: #ffffff;
+  --text: #111111;
+  --card: #eaeaea;
+  --accent: #0077ff;
+}
+
+/* GENERAL */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  padding-top: 60px;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* NAVBAR */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--card);
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 12px 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px #00000050;
+}
+
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+/* THEME TOGGLE */
+#theme-toggle {
+  margin-left: 20px;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--accent);
+}
+
+/* HERO */
 .hero {
   text-align: center;
   padding: 40px 20px;
-  background: #161b22;
 }
 
 .profile-pic {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  border: 3px solid #00d4ff;
-  object-fit: cover; /* Ensures the image fills the circle without distortion */
+  border: 3px solid var(--accent);
+  object-fit: cover;
 }
 
+.accent {
+  color: var(--accent);
+}
 
-.hero h1 {
+.btn-accent {
   margin-top: 15px;
-  font-size: 2.2rem;
+  padding: 10px 16px;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
-.hero p {
-  font-size: 1.1rem;
-  color: #8b949e;
+.btn-accent:hover {
+  opacity: 0.8;
 }
 
-/* Navigation */
-nav {
-  position: fixed; /* Makes it stay on top while scrolling */
-  top: 0;          /* Sticks to the top */
-  left: 0;
-  width: 100%;     /* Full width */
-  background: #21262d;
-  display: flex;
-  justify-content: center;
-  padding: 10px 0;
-  z-index: 1000;   /* Keeps it above all content */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow */
-}
-
-nav a {
-  color: #c9d1d9;
-  text-decoration: none;
-  margin: 0 15px;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: #00d4ff;
-}
-
-
-/* Sections */
+/* SECTIONS */
 section {
-  padding: 40px 20px;
+  padding: 50px 20px;
   max-width: 900px;
   margin: auto;
 }
 
 h2 {
-  color: #00d4ff;
-  margin-bottom: 15px;
+  color: var(--accent);
 }
 
-a {
-  color: #00d4ff;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Badges */
-.badges img {
-  margin: 10px;
-  border-radius: 10px;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #161b22;
-  color: #8b949e;
-  font-size: 0.9rem;
-}
-
-/* Responsive */
-@media(max-width: 768px) {
-  nav {
-    flex-direction: column;
-  }
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-}
-
-#skills {
-  text-align: center;
-  padding: 50px 20px;
-  background-color: #0d1117;
-}
-
-#skills h2 {
-  font-size: 2rem;
-  margin-bottom: 30px;
-}
-
+/* SKILL BARS */
 .skills-container {
   display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 25px;
 }
 
 .skill-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 120px;
-  transition: transform 0.3s ease;
+  width: 100%;
 }
 
-.skill-item img {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 10px;
+.skill-bar {
+  width: 100%;
+  background: #222;
+  height: 12px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 5px;
 }
 
-.skill-item:hover {
-  transform: scale(1.1);
+.skill-bar span {
+  display: block;
+  height: 100%;
+  width: 0%;
+  background: var(--accent);
+  transition: width 1.4s ease-in-out;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: var(--card);
+  color: var(--text);
+}
+
+/* PRINT ONLY CV SECTION */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  #home, #home * {
+    visibility: visible;
+  }
+
+  #home {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
 }
