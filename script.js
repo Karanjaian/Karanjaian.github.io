@@ -1,3 +1,4 @@
+// Dark/Light Mode Toggle
 const toggleThemeBtn = document.getElementById('toggle-theme');
 toggleThemeBtn.addEventListener('click', () => {
   if(document.documentElement.getAttribute('data-theme') === 'dark') {
@@ -7,8 +8,21 @@ toggleThemeBtn.addEventListener('click', () => {
   }
 });
 
-window.addEventListener('scroll', () => {
-  document.querySelectorAll('.skill-bar div').forEach(bar => {
-    bar.style.width = bar.getAttribute('style').match(/\d+%/)[0];
+// Animate Skill Bars when in viewport
+const skills = document.querySelectorAll('.skill-bar div');
+
+const isInViewport = (el) => {
+  const rect = el.getBoundingClientRect();
+  return rect.top <= window.innerHeight && rect.bottom >= 0;
+};
+
+const animateSkills = () => {
+  skills.forEach(skill => {
+    if(isInViewport(skill)) {
+      skill.style.width = skill.getAttribute('data-width');
+    }
   });
-});
+};
+
+window.addEventListener('scroll', animateSkills);
+window.addEventListener('load', animateSkills);
