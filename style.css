@@ -51,6 +51,10 @@ header nav ul li a, #toggle-theme {
   font-weight: bold;
 }
 
+header .hero {
+  margin-top: 20px;
+}
+
 header .hero h1 {
   font-size: 3rem;
   margin: 20px 0 10px;
@@ -58,6 +62,14 @@ header .hero h1 {
 
 header .hero p {
   font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
   margin-bottom: 20px;
 }
 
@@ -80,12 +92,21 @@ section {
 
 section h2 {
   font-size: 2rem;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   text-align: center;
 }
 
 .skill {
+  display: flex;
+  align-items: center;
+  gap: 15px;
   margin-bottom: 15px;
+}
+
+.skill-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
 }
 
 .skill-bar {
@@ -93,6 +114,7 @@ section h2 {
   border-radius: 20px;
   overflow: hidden;
   height: 20px;
+  flex: 1;
 }
 
 .skill-bar div {
