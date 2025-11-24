@@ -24,6 +24,15 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// CV Download Tracking
+const downloadBtn = document.querySelector('.download-btn');
+if (downloadBtn) {
+    downloadBtn.addEventListener('click', function() {
+        // You can add analytics here later
+        console.log('CV downloaded by recruiter');
+    });
+}
+
 // Navbar background on scroll
 window.addEventListener('scroll', () => {
     const header = document.querySelector('header');
