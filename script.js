@@ -74,21 +74,6 @@ skillData.forEach(section => {
     const categoryDiv = document.createElement('div');
     categoryDiv.className = "skill-category";
 
-    const h3 = document.createElement('h3');
-    h3.innerHTML = `<i class="${section.icon}"></i> ${section.category}`;
-    categoryDiv.appendChild(h3);
+    const h3 = doc
 
-    const tagsDiv = document.createElement('div');
-    tagsDiv.className = "skill-tags";
-
-    section.skills.forEach(skill => {
-        const span = document.createElement('span');
-        span.className = "skill-tag";
-        span.textContent = skill;
-        tagsDiv.appendChild(span);
-    });
-
-    categoryDiv.appendChild(tagsDiv);
-    skillsGrid.appendChild(categoryDiv);
-});
 
