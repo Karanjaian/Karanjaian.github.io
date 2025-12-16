@@ -53,7 +53,7 @@ const skillData = [
     {
         category: "Programming Languages",
         icon: "fas fa-code",
-        skills: ["Python 3", "Bash", "C++", "JavaScript ES6"]
+        skills: ["Python 3", "Bash", "C++"]
     },
     {
         category: "Cybersecurity Tools",
