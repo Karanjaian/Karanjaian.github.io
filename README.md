@@ -1,6 +1,6 @@
-# Ian Karanja - Cybersecurity Portfolio
+# Ian Karanja - Portfolio
 
-A professional cybersecurity portfolio website showcasing my skills, projects, and experience.
+A professional portfolio website showcasing my skills, projects, and experience.
 
 ## Features
 
